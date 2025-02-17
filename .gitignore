@@ -22,3 +22,29 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# 🚀 Ignorar dependencias de Node.js
+node_modules/
+dist/
+
+# ⚙️ Archivos de configuración y logs
+.env
+.vscode/
+.DS_Store
+package-lock.json
+yarn.lock
+
+# ⚡ Archivos de compilación y cache
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 📦 Cache de Vite y otros archivos generados
+.vite/
+.cache/
+output/
+
+# 🖼️ Archivos del sistema (Mac y Windows)
+Thumbs.db
+.DS_Store

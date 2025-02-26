@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card.jsx";
 import { Play, Home, Menu } from "lucide-react";
-import "./songsViews.css";
+import "./songsviews.css";
 
 
 const songs = [
@@ -18,29 +18,34 @@ export default function SongList() {
 
     return (
         <div className="container_songSelection">
-            
+
             <div className="icons_songSelection">
-                <Home className="w-6 h-6 cursor-pointer" />
-                <Menu className="w-6 h-6 cursor-pointer" />
-                <h2 className="songSelection_Tittle">Escoge tu Canción</h2>
+                <Home className="w-12 h-12 cursor-pointer"/>
+                <Menu className="w-12 h-12 cursor-pointer"/>
             </div>
 
+            <div>
+                <h2 className="songSelection_Tittle">Escoge tu Canción</h2>
+            </div>
 
             <div className="song-list">
                 {songs.map((song) => (
                     <Card
                         key={song.id}
                         className={`song-card ${selectedSong === song.id ? "selected" : ""}`}
-                        onClick={() => setSelectedSong(song.id)}>
-
-                        <CardContent className="flex justify-between w-full">
-                            <span>{song.name}</span>
-                            <span className="song-difficulty">Dificultad: {song.difficulty}</span>
-                            <Play className="song-play-icon" />
+                        onClick={() => setSelectedSong(song.id)}
+                    >
+                        <CardContent className="song-content">
+                            <div className="song-right">
+                                <span className="song-name">{song.name}</span>
+                                <span className="song-difficulty">Dificultad: {song.difficulty}</span>
+                                <Play className="song-play-icon"/>
+                            </div>
                         </CardContent>
                     </Card>
                 ))}
             </div>
+
 
             <Button
                 className="select-song-button"

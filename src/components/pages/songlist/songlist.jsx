@@ -20,8 +20,8 @@ export default function SongList() {
         <div className="container_songSelection">
 
             <div className="icons_songSelection">
-                <Home className="w-12 h-12 cursor-pointer"/>
-                <Menu className="w-12 h-12 cursor-pointer"/>
+                <Home id="home" className="w-12 h-12 cursor-pointer"/>
+                <Menu id="menu" className="w-12 h-12 cursor-pointer"/>
             </div>
 
             <div>
@@ -47,7 +47,7 @@ export default function SongList() {
             </div>
 
 
-            <Button
+            <Button id="button"
                 className="select-song-button"
                 disabled={!selectedSong}
                 onClick={() => alert(`Has seleccionado: ${songs.find((s) => s.id === selectedSong).name}`)}>

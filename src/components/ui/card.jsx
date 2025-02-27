@@ -5,3 +5,9 @@ export function Card({ children }) {
 export function CardContent({ children }) {
   return <div className="card-content">{children}</div>;
 }
+export function CardTitle({ children }) {
+  return <div className="card-title">{children}</div>;
+}
+export function CardHeader({ children }) {
+  return <div className="card-header">{children}</div>;
+}

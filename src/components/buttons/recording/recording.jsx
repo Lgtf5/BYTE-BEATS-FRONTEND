@@ -1,22 +1,15 @@
 import React from "react";
+import "./recording.css";
+import { FaMicrophone, FaStop } from "react-icons/fa";
 
-const RecordingControls = ({
-  recording,
-  recordingData,
-  startRecording,
-  stopRecording,
-  sendRecording,
-}) => {
+const RecordingControls = ({ recording, startRecording, stopRecording }) => {
   return (
-    <div style={{ margin: "1rem 0" }}>
-      <button onClick={startRecording} disabled={recording}>
-        Iniciar Grabación
+    <div className="recording-controls">
+      <button onClick={startRecording} disabled={recording} className="icon-btn">
+        <FaMicrophone size={30} className="record-icon" />
       </button>
-      <button onClick={stopRecording} disabled={!recording}>
-        Detener Grabación
-      </button>
-      <button onClick={sendRecording} disabled={!recordingData}>
-        Enviar Grabación
+      <button onClick={stopRecording} disabled={!recording} className="icon-btn">
+        <FaStop size={30} className="stop-icon" />
       </button>
     </div>
   );

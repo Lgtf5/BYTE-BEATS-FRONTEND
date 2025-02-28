@@ -1,0 +1,30 @@
+.recording-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .icon-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  .record-icon {
+    color: red;
+  }
+  
+  .stop-icon {
+    color: black;
+  }
+  
+  .icon-btn:active {
+    transform: scale(0.9);
+  }

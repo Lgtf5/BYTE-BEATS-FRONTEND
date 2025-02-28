@@ -35,7 +35,7 @@ export default function ViewSongList() {
                         className={`song_card ${selectedSong === song.id ? "selected" : ""}`}
                         onClick={() => setSelectedSong(song.id)}
                     >
-                        <CardContent >
+                        <CardContent>
                             <div className="song_card">
                                 <span className="song_name">{song.name}</span>
                                 <span className="song_difficulty">Dificultad: {song.difficulty}</span>

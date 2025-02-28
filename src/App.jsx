@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Header from "./components/header/header.jsx"
 import Footer from "./components/footer/footer.jsx"
-import SongList from "./components/pages/songlist/songlist.jsx"
+import ViewSongList from "./components/pages/ViewSongList/ViewSongList.jsx"
 import "./app.css"
 
 
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div>
     <Header />
-    <SongList />
+    <ViewSongList />
     <Footer />
     </div>
   )

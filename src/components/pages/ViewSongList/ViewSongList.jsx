@@ -13,33 +13,33 @@ const songs = [
     { id: 5, name: "Canción 5", difficulty: "BAJA" },
 ];
  
-export default function SongList() {
+export default function ViewSongList() {
     const [selectedSong, setSelectedSong] = useState(null); 
 
     return (
         <div className="container_songSelection">
 
             <div className="icons_songSelection">
-                <Home id="home" className="w-12 h-12 cursor-pointer"/>
-                <Menu id="menu" className="w-12 h-12 cursor-pointer"/>
+                <Home id="home" />
+                <Menu id="menu" />
             </div>
 
             <div>
                 <h2 className="songSelection_Tittle">Escoge tu Canción</h2>
             </div>
 
-            <div className="song-list">
+            <div className="song_list">
                 {songs.map((song) => (
                     <Card
                         key={song.id}
-                        className={`song-card ${selectedSong === song.id ? "selected" : ""}`}
+                        className={`song_card ${selectedSong === song.id ? "selected" : ""}`}
                         onClick={() => setSelectedSong(song.id)}
                     >
-                        <CardContent className="song-content">
-                            <div className="song-right">
-                                <span className="song-name">{song.name}</span>
-                                <span className="song-difficulty">Dificultad: {song.difficulty}</span>
-                                <Play className="song-play-icon"/>
+                        <CardContent>
+                            <div className="song_card">
+                                <span className="song_name">{song.name}</span>
+                                <span className="song_difficulty">Dificultad: {song.difficulty}</span>
+                                <Play className="song_playIcon"/>
                             </div>
                         </CardContent>
                     </Card>
@@ -47,8 +47,7 @@ export default function SongList() {
             </div>
 
 
-            <Button id="button"
-                className="select-song-button"
+            <Button className="button_songSelection"
                 disabled={!selectedSong}
                 onClick={() => alert(`Has seleccionado: ${songs.find((s) => s.id === selectedSong).name}`)}>
 

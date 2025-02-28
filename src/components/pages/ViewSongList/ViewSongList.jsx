@@ -30,7 +30,7 @@ export default function ViewSongList() {
 
             <div className="song_list">
                 {songs.map((song) => (
-                    <Card
+                    <Card id= "list_card"
                         key={song.id}
                         className={`song_card ${selectedSong === song.id ? "selected" : ""}`}
                         onClick={() => setSelectedSong(song.id)}
@@ -38,7 +38,7 @@ export default function ViewSongList() {
                         <CardContent>
                             <div className="song_card">
                                 <span className="song_name">{song.name}</span>
-                                <span className="song_difficulty">Dificultad: {song.difficulty}</span>
+                                <span className="song_difficulty">Dificultad: <strong>{song.difficulty}</strong></span>
                                 <Play className="song_playIcon"/>
                             </div>
                         </CardContent>
@@ -47,7 +47,7 @@ export default function ViewSongList() {
             </div>
 
 
-            <Button className="button_songSelection"
+            <Button id="button"
                 disabled={!selectedSong}
                 onClick={() => alert(`Has seleccionado: ${songs.find((s) => s.id === selectedSong).name}`)}>
 

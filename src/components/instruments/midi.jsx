@@ -2,11 +2,11 @@ import React from "react";
 import { Piano, KeyboardShortcuts, MidiNumbers } from "react-piano";
 import "react-piano/dist/styles.css";
 
-// Define el rango del piano: de C4 a B5 (dos octavas)
-const firstNote = MidiNumbers.fromNote("c4"); // nota 60
-const lastNote = MidiNumbers.fromNote("b5");  // nota 83
 
-// Configuración de atajos de teclado para tocar el piano
+const firstNote = MidiNumbers.fromNote("c4"); 
+const lastNote = MidiNumbers.fromNote("b5");  
+
+
 const keyboardShortcuts = KeyboardShortcuts.create({
   firstNote,
   lastNote,

@@ -1,75 +1,121 @@
-
-
-
-
 .container_songSelection {
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    margin:0;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+  
 }
 
-  /* Encabezado con iconos de Home y Menú */
-  .icons_songSelection {
-    display: flex;
-    justify-content: left;
-    margin-bottom: 16px;
-    gap: 10px;
-    margin-left: 20px;
-    cursor: pointer;
-    width:120px;
-    height: 80px;
 
-  }
-
-
-
-
-  .songSelection_Tittle {
-    font-size: 2.5rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    
-  }
-
-  /* Lista de canciones */
-  .song_list {
-    width: auto;
-    margin: auto;
-    margin-top: 120px ;
-    justify-content: center;
-    padding: auto;
-    
-  }
-
+.icon_container {
+  display: flex;
+  margin-bottom: 16px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  justify-content: left;
+  gap: 5px;
   
+}
+.icon_menu {
+  background-image: url('src/assets/icons/menu.svg');
+  background-size: cover; /* Ajusta según sea necesario */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  
+}
+.icon_home {
+  background-image: url('src/assets/icons/home.svg');
+  background-size: cover; /* Ajusta según sea necesario */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  
+}
 
-  /* Estilos de las tarjetas de canciones */
-  .song_card {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.3s;
-    background-color: #c5c0c0; /* Fondo gris para cada tarjeta */
-    width: 900px;/* Ajuste de tamaño de tarjeta */
-    gap: 5px; /* Espaciado entre la dificultad y el botón Play */
-    font-size: 20px;
-    margin:auto;
-    margin-bottom: 5px; /*espaciado entre tarjetas*/
-  }
+.icon {
+  display: flex;
+  margin-bottom: 16px;
+  margin-left: 20px;   
+  cursor: pointer;
+  width:50px;
+  height: 50px;
+  padding: 2px;
+  margin: 2px;
+  justify-content: center;
+}
+
+.icon:last-child {
+  margin-right: 0;
+  /* Remove margin from the last icon */
+}
 
 
-  .song_card:hover {
-    background-color: #99ea99;;
-  }
+.songSelection_Tittle {
+  display: flex;
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center; /*me daba error x consola si ponia auto*/
+  padding: 20px;
+  margin: 20px;
+  margin-top: 10px;
+  width: auto;
 
+}
+
+
+.song_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 20px;
+  width: auto;
+}
+
+
+.card_content, .card  {
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+  display: flex;
+  
+}
+
+
+.song_card {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  background-color: #c5c0c0;/* Fondo gris para cada tarjeta */
+  gap: 5px;
+  font-size: 20px;
+  padding: 5px;
+  margin: 2px;/*espaciado entre tarjetas*/
+  width: 700px;
+  height: 47px;
+}
+
+.song_card:hover {
+  background-color: #99ea99;
+}
+
+
+/*no me funciona*/
+.card_content.selected {
+  border-color: #072c15;
+  
+}
 
 
 .song_name {
@@ -82,30 +128,43 @@
 .song_difficulty {
   font-size: 18px;
   margin-right: 3px;
-  
+  text-align: right;
+  margin-right: 10px;
+
 }
 
 .song_playIcon {
   color: #22c55e;
   width: 30px;
   height: 30px;
-  margin-right: -30px;
   cursor: pointer;
+  padding: 1px;
+  margin: 1px;
+  background-image: url('src/assets/icons/play-button.svg');
+  background-size: cover; /* Ajusta según sea necesario */
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.song_playIcon:hover {
+  fill:#2225c5
+}
+.song_playIcon.selected {
+  color: #2225c5;
 }
 
-
-button {
-    display: flex;
-    width: 400px;
-    align-self: center;
-    margin: 50px;
-    padding: 10px;
-    font-size: 16px;
-    justify-content: center;
-    background-color: #22c55e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-  }
+.btn_selectSong {
+  display: flex;
+  width: 400px;
+  align-self: center;
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
+  justify-content: center;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}

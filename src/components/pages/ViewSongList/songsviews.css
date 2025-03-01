@@ -9,12 +9,56 @@
 }
 
 
+.container-menu {
+  position: relative;
+}
+
+.menu_dropDown {
+  position: absolute;
+  top: 100%;
+  left: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  min-width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.menu_dropDown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+ul {
+  list-style:none;
+  padding: 2px;
+  margin: 2px;
+
+}
+li {
+  border-bottom: 1px solid #eee;
+}
+li:last-child {
+  border-bottom: none;
+}
+a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+a:hover {
+  background-color: #f5f5f5;
+}
+
 .icon_container {
   display: flex;
   margin-bottom: 16px;
   cursor: pointer;
   padding: 5px;
-  margin: 5px;
+  margin-top:20px;
   justify-content: left;
   gap: 5px;
   
@@ -22,29 +66,43 @@
 .icon_menu {
   background-image: url('src/assets/icons/menu.svg');
   background-size: cover; /* Ajusta según sea necesario */
-  background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
-  height: 40px;
+
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 30px;
+  margin: 5px;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   
 }
 .icon_home {
   background-image: url('src/assets/icons/home.svg');
   background-size: cover; /* Ajusta según sea necesario */
-  background-repeat: no-repeat;
   background-position: center;
-  width: 40px;
-  height: 40px;
+
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 30px;
+  margin: 5px;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   
 }
 
-.icon {
+svg {
   display: flex;
   margin-bottom: 16px;
   margin-left: 20px;   
   cursor: pointer;
-  width:50px;
-  height: 50px;
+  width:20px;
+  height: 30px;
   padding: 2px;
   margin: 2px;
   justify-content: center;
@@ -62,9 +120,9 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   justify-content: center;
-  align-items: center; /*me daba error x consola si ponia auto*/
   padding: 20px;
   margin: 20px;
+  margin-left: -10px;
   margin-top: 10px;
   width: auto;
 
@@ -134,23 +192,17 @@
 }
 
 .song_playIcon {
-  color: #22c55e;
+  display: flex;
+  align-self: center;
+  fill: #22c55e; /*no hace caso*/
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 1px;
   margin: 1px;
+  margin-left: 5px;
   background-image: url('src/assets/icons/play-button.svg');
-  background-size: cover; /* Ajusta según sea necesario */
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-.song_playIcon:hover {
-  fill:#2225c5
-}
-.song_playIcon.selected {
-  color: #2225c5;
+  background-size: cover; 
 }
 
 .btn_selectSong {

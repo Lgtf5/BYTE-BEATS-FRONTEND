@@ -1,0 +1,52 @@
+.home_container {
+    text-align: center;
+    padding: 20px;
+}
+
+.home_title {
+    margin-top: 30px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.home_images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+
+.instrument {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    flex-shrink: 0;
+}
+
+.home_image {
+    width: 391px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.home_image:hover {
+    transform: scale(1.1);
+}
+
+
+.instrument_text {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+

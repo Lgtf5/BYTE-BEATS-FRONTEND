@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card.jsx";
+import { Link } from "react-router-dom";
 import "./songsviews.css";
 
 
@@ -26,32 +27,26 @@ export default function ViewSongList() {
         <div className="container_songSelection">
             <nav className="nav">
             <div className="icon_container">
-                <div>
-                    <svg className="icon_home" onClick={() => window.location.href = '/'}
-                        viewBox="0 0 0 0">
+            <   div>
+                     <Link to="/">
+                     <svg className="icon_home" viewBox="0 0 24 24">
                         <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" />
-                        {/*  <HomeIcon className="icon_home" />  */}
-                    </svg>
+                     </svg>
+                    </Link>
                 </div>
-
-
-
-
                 <div className="container-menu">
                     <svg className="icon_menu" onClick={() => setOpenMenu(!openMenu)}
-                        /* <MenuIcon className="icon_menu" */
                         viewBox="0 0 24 24">
                         <path d="M4 8H20M4 16H20M4 24H20" />
                     </svg>
 
                     <div className={`menu_dropDown ${openMenu ? 'open' : ''}`}>
                         <ul>
-                            <li><a href="/pagina1">Inicio</a></li>
-                            <li><a href="/pagina2">Grabaciones</a></li>
-                            <li><a href="/pagina3">Canciones</a></li>
+                            <li><Link to="/">Inicio</Link></li>
+                            <li><Link to="/recordingslist">Grabaciones</Link></li>
+                            <li><Link to="/songlist">Canciones</Link></li>
                         </ul>
                     </div>
-                    {/* </button> */}
                 </div>
             </div>
             </nav>

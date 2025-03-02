@@ -12,7 +12,7 @@
   position: relative;
 }
 
-.menu_dropDown {
+.container_songSelection .menu_dropDown {
   position: absolute;
   top: 100%;
   left: 8px;
@@ -27,27 +27,27 @@
   transition: all 0.3s ease;
 }
 
-.menu_dropDown.open {
+.container_songSelection .menu_dropDown.open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-ul {
+.container_songSelection ul {
   list-style:none;
   padding: 2px;
   margin: 2px;
 }
 
-li {
+.container_songSelection li {
   border-bottom: 1px solid #eee;
 }
 
-li:last-child {
+.container_songSelection li:last-child {
   border-bottom: none;
 }
 
-a {
+.container_songSelection a {
   display: block;
   padding: 10px 15px;
   color: #0c0b0bd3;
@@ -55,28 +55,28 @@ a {
   transition: background-color 0.2s;
 }
 
-a:hover {
+.container_songSelection a:hover {
   background-color: #9286863d;
 
 }
-li {
+.container_songSelection li {
   border-bottom: 1px solid #eee;
 }
-li:last-child {
+.container_songSelection li:last-child {
   border-bottom: none;
 }
-a {
+.container_songSelection a {
   display: block;
   padding: 10px 15px;
   color: #333;
   text-decoration: none;
   transition: background-color 0.2s;
 }
-a:hover {
+.container_songSelection a:hover {
   background-color: #f5f5f5;
 }
 
-.icon_container {
+.container_songSelection .icon_container {
   display: flex;
   margin-bottom: 16px;
   cursor: pointer;
@@ -84,26 +84,26 @@ a:hover {
   margin-top:20px;
   gap: 5px;
 }
-.icon_menu {
+.container_songSelection .icon_menu {
   background-image: url('src/assets/icons/menu.svg');
 }
-.icon_home {
+.container_songSelection .icon_home {
   background-image: url('src/assets/icons/home.svg');
 }
 
-svg {
+.container_songSelection svg {
   width: 20px;
   height: 30px;
   justify-content: center;
-  background-size: cover; /* Ajusta según sea necesario */
+  background-size: cover; 
   background-position: center;
   justify-content: left;
   gap: 5px;
   
 }
-.icon_menu {
+.container_songSelection .icon_menu {
   background-image: url('src/assets/icons/menu.svg');
-  background-size: cover; /* Ajusta según sea necesario */
+  background-size: cover; 
   background-position: center;
 
   cursor: pointer;
@@ -117,9 +117,9 @@ svg {
   stroke-linejoin: round;
   
 }
-.icon_home {
+.container_songSelection .icon_home {
   background-image: url('src/assets/icons/home.svg');
-  background-size: cover; /* Ajusta según sea necesario */
+  background-size: cover; 
   background-position: center;
 
   cursor: pointer;
@@ -134,7 +134,7 @@ svg {
   
 }
 
-svg {
+.container_songSelection svg {
   display: flex;
   margin-bottom: 16px;
   margin-left: 20px;   
@@ -146,9 +146,9 @@ svg {
   justify-content: center;
 }
 
-.icon:last-child {
+.container_songSelection .icon:last-child {
   margin-right: 0;
-  /* Remove margin from the last icon */
+
 }
 
 
@@ -193,11 +193,11 @@ svg {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
-  background-color: #c5c0c0;/* Fondo gris para cada tarjeta */
+  background-color: #c5c0c0;
   gap: 5px;
   font-size: 20px;
   padding: 5px;
-  margin: 2px;/*espaciado entre tarjetas*/
+  margin: 2px;
   width: 700px;
   height: 47px;
 }
@@ -207,7 +207,6 @@ svg {
 }
 
 
-/*no me funciona*/
 .card_content.selected {
   border-color: #072c15;
   
@@ -231,7 +230,7 @@ svg {
 .song_playIcon {
   display: flex;
   align-self: center;
-  fill: #22c55e; /*no hace caso*/
+  fill: #22c55e; 
   width: 30px;
   height: 30px;
   cursor: pointer;

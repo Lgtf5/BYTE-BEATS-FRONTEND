@@ -74,7 +74,7 @@ a:hover {
   background-image: url('src/assets/icons/home.svg');
 }
 
-svg {
+.container_songSelection svg {
   width: 20px;
   height: 30px;
   justify-content: center;

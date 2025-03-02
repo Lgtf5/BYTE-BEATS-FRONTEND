@@ -1,0 +1,125 @@
+
+
+
+
+.container_songSelection {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin:0;
+    width: 100%;
+    height: 100%;
+}
+
+  /* Encabezado con iconos de Home y Menú */
+  .icons_songSelection {
+
+    display: flex;
+    justify-content: left;
+    margin-bottom: 16px;
+    gap: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    width:120px;
+    height: 80px;
+
+  }
+
+
+
+  .songSelection_Tittle {
+
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+  }
+
+  /* Lista de canciones */
+  .song-list {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 110px;
+    padding: 0px;
+    
+  }
+
+  /* Estilos de las tarjetas de canciones */
+  .song-card {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+    background-color: #c5c0c0; /* Fondo gris para cada tarjeta */
+    width: 100%;
+  }
+
+
+  .song-card.hover {
+    background-color: #99ea99;;
+  }
+
+.song-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+
+.song-name {
+  flex: 1;
+  text-align: left;
+  margin-left: -40px;
+}
+
+.song-right {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaciado entre la dificultad y el botón Play */
+  justify-content: flex-end;
+  white-space: nowrap;
+  font-size: 20px;
+  
+}
+
+.song-difficulty {
+  font-size: 18px;
+  margin: 16px 10px 10px;
+  
+}
+
+.song-play-icon {
+  color: #22c55e;
+  width: 30px;
+  height: 30px;
+  margin-right: -60px;
+  cursor: pointer;
+}
+
+
+button {
+    display: flex;
+    width: 32%;
+    align-self: center;
+    margin: 50px;
+    padding: 10px;
+    font-size: 16px;
+    justify-content: center;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }

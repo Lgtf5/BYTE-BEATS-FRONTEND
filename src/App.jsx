@@ -5,8 +5,10 @@ import Header from "./components/header/header.jsx";
 import PianoPage from "./components/pages/pianopage/pianopage.jsx";
 import HomePage from "./components/pages/homepage/homepage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ViewRecordingsList from "./components/pages/ViewRecordingsList/ViewRecordingsList.jsx"
 
 const App = () => {
+ 
   return (
     <icon icon_home = {{fill:'blue'}}/>,
     <icon icon_menu = {{fill:'blue'}}/>,

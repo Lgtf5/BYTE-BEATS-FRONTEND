@@ -78,7 +78,7 @@ a:hover {
   width: 20px;
   height: 30px;
   justify-content: center;
-  background-size: cover; /* Ajusta según sea necesario */
+  background-size: cover; 
   background-position: center;
   cursor: pointer;
   padding: 10px;
@@ -116,11 +116,11 @@ a:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
-  background-color: #c5c0c0; /* Fondo gris para cada tarjeta */
+  background-color: #c5c0c0; 
   gap: 5px;
   font-size: 20px;
   padding: 5px;
-  margin: 2px; /*espaciado entre tarjetas*/
+  margin: 2px;
   width: 700px;
   height: 47px;
 }
@@ -129,7 +129,6 @@ a:hover {
   background-color: #99ea99;
 }
 
-/*no me funciona*/
 .card_content.selected {
   border: #333 2px solid;
 }
@@ -153,7 +152,7 @@ a:hover {
 .song_playIcon {
   display: flex;
   align-self: center;
-  color: #22c55e; /*no hace caso*/
+  color: #22c55e;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -167,7 +166,7 @@ a:hover {
 .song_trashIcon {
   display: flex;
   align-self: center;
-  color: #22c55e; /*no hace caso*/
+  color: #22c55e;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -179,7 +178,7 @@ a:hover {
 }
 
 .song_trashIcon:hover {
-  color: red; /* no funciona*/
+  color: red; 
 }
 
 .btn_selectSong {

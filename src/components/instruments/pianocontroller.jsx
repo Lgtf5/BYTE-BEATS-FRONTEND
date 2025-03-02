@@ -1,12 +1,8 @@
-// src/controllers/PianoController.js
 import { useState, useEffect, useRef } from "react";
 import { Howl, Howler } from "howler";
 import soundMap from "../../utils/soundmap.jsx";
 import { postRecording } from "../../services/recordingservices.js";
 
-/**
- * Custom hook que encapsula la lógica del piano y grabación.
- */
 export const usePianoController = () => {
   const [recording, setRecording] = useState(false);
   const recordingStartTimeRef = useRef(null);
@@ -15,11 +11,9 @@ export const usePianoController = () => {
   const soundsRef = useRef({});
 
   useEffect(() => {
-    // Asegúrate de que el contexto de Howler esté activo
     if (Howler.ctx && Howler.ctx.state === "suspended") {
       Howler.ctx.resume();
     }
-    // Pre-cargar sonidos para cada nota
     const sounds = {};
     for (const [midi, filePath] of Object.entries(soundMap)) {
       sounds[midi] = new Howl({

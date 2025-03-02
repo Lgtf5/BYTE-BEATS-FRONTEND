@@ -8,6 +8,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
+    <icon icon_home = {{fill:'blue'}}/>,
+    <icon icon_menu = {{fill:'blue'}}/>,
+    <icon play-button ={{fill:'green'}}/>,
+
     <div>
       <Router>
         <Header />
@@ -21,4 +25,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;;
